@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xizhi Li | Research</title>
+    <meta name="description" content="Xizhi Li's research, engineering, and life." />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="./index.html">Xizhi Li</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="active" href="./index.html">Research</a>
+          <a href="./engineering.html">Engineering</a>
+          <a href="./life.html">Life</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container layout">
+      <aside class="profile-card">
+        <img class="avatar" src="./profile.jfif" alt="Illustrated portrait of Xizhi Li" />
+        <h1>Xizhi Li</h1>
+        <p class="affiliation">Nanjing University of Information Science and Technology</p>
+        <ul class="profile-links">
+          <li><span aria-hidden="true">⌂</span> Nanjing, China</li>
+          <li><span aria-hidden="true">✉</span> <a href="mailto:liaimme@163.com">liaimme@163.com</a></li>
+          <li><span aria-hidden="true">⌘</span> <a href="https://github.com/xz235/" target="_blank" rel="noopener noreferrer">GitHub: xz235</a></li>
+          <li><span aria-hidden="true">◆</span> <a href="https://scholar.google.com/citations?user=7hAdOOUAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+        </ul>
+      </aside>
+
+      <div class="content">
+        <section class="intro">
+          <p class="eyebrow">Research</p>
+          <h2>Brain Imaging &amp; Representation Learning</h2>
+          <p>I am a third-year graduate student working on intelligent diagnosis of brain disorders with resting-state functional MRI. My research explores brain network modeling and representation learning, with a focus on cross-site generalization, static–dynamic graph learning, and causal representations of brain dynamics.</p>
+        </section>
+
+        <section class="section-block">
+          <h2>Research Highlights</h2>
+          <div class="research-grid">
+            <article class="research-card">
+              <img src="./TSD-GCN_framework.jpg" alt="TSD-GCN framework diagram" loading="lazy" />
+              <div><p class="paper-tag">Graph Learning</p><h3>TSD-GCN</h3><p>A topology-learnable static–dynamic graph convolutional network that captures complementary functional-connectivity patterns for brain disorder detection.</p></div>
+            </article>
+            <article class="research-card">
+              <img src="./Ca-MIL_framework.jpg" alt="Ca-MIL framework diagram" loading="lazy" />
+              <div><p class="paper-tag">Causal Learning</p><h3>Ca-MIL</h3><p>A multi-instance causal representation framework that models temporal variations in brain dynamics and improves disease classification from rs-fMRI.</p></div>
+            </article>
+            <article class="research-card">
+              <img src="./GACRL_framework.jpg" alt="GACRL framework diagram" loading="lazy" />
+              <div><p class="paper-tag">Cross-Site Learning</p><h3>GACRL</h3><p>A geometry-aware causal representation learning framework that preserves brain-network geometry on Riemannian manifolds and learns both domain-invariant and domain-dependent causal representations.</p></div>
+            </article>
+            <article class="research-card">
+              <img src="./DDA-LRR.jpg" alt="DDA-LRR optimization algorithm steps" loading="lazy" />
+              <div><p class="paper-tag">Domain Adaptation</p><h3>DDA-LRR</h3><p>A discriminative domain adaptation method that uses low-rank representation, orthogonal reconstruction, and source-domain supervision for multi-site autism spectrum disorder identification.</p></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <h2>Publications</h2>
+          <article class="publication"><span class="year">2026</span><div><h3>Topology-Learnable Static-Dynamic Graph Convolutional Network for Brain Disorder Detection with Functional MRI</h3><p class="muted">Second author · IEEE Transactions on Neural Systems and Rehabilitation Engineering</p></div></article>
+          <article class="publication"><span class="year">2023</span><div><h3>Discriminative Domain Adaptation via Low-Rank Representation for Multi-site Autism Spectrum Disorder Identification</h3><p class="muted">First author · Journal of Data Acquisition and Processing, 38(4), 886–897</p></div></article>
+        </section>
+
+        <section class="section-block">
+          <h2>Manuscripts</h2>
+          <article class="publication"><span class="year">2026</span><div><h3>Multi-Instance Causal Representation Learning of Brain Dynamics for Disease Detection</h3><p class="muted">Second author · Minor revision at Medical Image Analysis</p></div></article>
+        </section>
+
+        <section class="section-block compact-grid">
+          <div><h2>Education</h2><p><strong>M.Sc. in Computer Science</strong><br /><span class="muted">NUIST · 2024–2027 (expected)<br />GPA: 4.15/5 · Top 4%</span></p><p><strong>B.Eng.</strong><br /><span class="muted">NUIST · 2020–2024</span></p></div>
+          <div><h2>Research Interests</h2><ul class="clean-list"><li>Medical Image Analysis</li><li>Brain Network and Time-Series Analysis</li><li>Domain Adaptation and Causal Representation Learning</li></ul></div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer"><div class="container"><p>© <span id="year"></span> Xizhi Li.</p></div></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

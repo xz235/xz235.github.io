@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xizhi Li | Engineering</title>
+    <meta name="description" content="Engineering projects and experience by Xizhi Li." />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="topbar"><div class="container topbar-inner"><a class="brand" href="./index.html">Xizhi Li</a><nav class="nav" aria-label="Primary navigation"><a href="./index.html">Research</a><a class="active" href="./engineering.html">Engineering</a><a href="./life.html">Life</a></nav></div></header>
+    <main class="container layout">
+      <aside class="profile-card">
+        <img class="avatar" src="./profile.jfif" alt="Illustrated portrait of Xizhi Li" />
+        <h1>Xizhi Li</h1><p class="affiliation">Nanjing University of Information Science and Technology</p>
+        <ul class="profile-links"><li><span aria-hidden="true">⌂</span> Nanjing, China</li><li><span aria-hidden="true">✉</span> <a href="mailto:liaimme@163.com">liaimme@163.com</a></li><li><span aria-hidden="true">⌘</span> <a href="https://github.com/xz235/" target="_blank" rel="noopener noreferrer">GitHub: xz235</a></li><li><span aria-hidden="true">◆</span> <a href="https://scholar.google.com/citations?user=7hAdOOUAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li></ul>
+      </aside>
+      <div class="content">
+        <section class="intro"><p class="eyebrow">Engineering</p><h2>AI Applications &amp; Backend Systems</h2><p>I build production-oriented AI agents, retrieval systems, and high-concurrency backend services. I care about clear system boundaries, observable workflows, and measurable improvements.</p></section>
+        <section class="section-block">
+          <h2>Internships</h2>
+          <p class="internship-line"><em>2026.02–2026.06</em>, AsiaInfo Security, Nanjing, China.</p>
+          <p class="internship-line"><em>2026.06–2026.09</em>, Institute of Software, Chinese Academy of Sciences, Beijing, China.</p>
+        </section>
+        <section class="section-block"><h2>Technical Toolkit</h2><div class="chips"><span>Java</span><span>Spring Boot</span><span>Spring Cloud</span><span>Spring AI</span><span>LangChain4j</span><span>RAG</span><span>Agents</span><span>MySQL</span><span>Redis</span><span>Kafka</span><span>RocketMQ</span><span>ClickHouse</span><span>Elasticsearch</span><span>Milvus</span><span>Docker</span><span>Kubernetes</span></div></section>
+        <section class="section-block">
+          <h2>Selected Projects</h2>
+          <article class="project"><div class="project-heading"><div><p class="paper-tag">Core Developer · 2025.12–2026.02</p><h3>AIOps Agent Platform</h3></div><span class="project-number">01</span></div><p>Combined retrieval-augmented generation, agent tools, and automated diagnostics into an end-to-end workflow that reduced troubleshooting time from hours to minutes.</p><ul class="clean-list"><li>Designed a Markdown-driven tool registration and loading mechanism.</li><li>Implemented persistent agent state and memory with Redis.</li><li>Streamed model output, tool progress, and PDF reports through SSE.</li><li>Improved retrieval with semantic chunking, embeddings, and reranking.</li></ul></article>
+          <article class="project"><div class="project-heading"><div><p class="paper-tag">Backend Developer · 2025.07–2025.12</p><h3>Flash-Sale System Optimization</h3></div><span class="project-number">02</span></div><p>Improved consistency and throughput for a high-demand ordering system, supporting peak traffic above 2,000 TPS.</p><ul class="clean-list"><li>Used Redis and Lua for atomic inventory deduction and overselling prevention.</li><li>Added Redisson distributed locks to guarantee idempotent ordering.</li><li>Built a local-cache and Redis two-level caching strategy.</li><li>Applied token-bucket rate limiting and RocketMQ for traffic smoothing.</li></ul></article>
+        </section>
+      </div>
+    </main>
+    <footer class="footer"><div class="container"><p>© <span id="year"></span> Xizhi Li.</p></div></footer><script src="./script.js"></script>
+  </body>
+</html>

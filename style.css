@@ -1,0 +1,246 @@
+:root {
+  --ink: #172033;
+  --muted: #647084;
+  --blue: #1f5fa8;
+  --blue-soft: #eaf2fb;
+  --line: #dce3eb;
+  --paper: #ffffff;
+  --wash: #f5f8fb;
+  --warm: #c78119;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+a { color: var(--blue); text-underline-offset: 3px; }
+img { max-width: 100%; }
+.container { width: min(1120px, 92vw); margin: 0 auto; }
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(220, 227, 235, 0.92);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.brand {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.32rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.nav { display: flex; align-items: center; gap: 1.7rem; }
+.nav a {
+  position: relative;
+  padding: 1.35rem 0 1.15rem;
+  color: #4b5668;
+  font-size: 0.94rem;
+  text-decoration: none;
+}
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0.82rem;
+  height: 2px;
+  background: var(--blue);
+  transition: right 180ms ease;
+}
+.nav a:hover, .nav a.active { color: var(--blue); }
+.nav a:hover::after, .nav a.active::after { right: 0; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 255px minmax(0, 1fr);
+  gap: 4rem;
+  padding: 4.2rem 0 5rem;
+}
+.profile-card {
+  position: sticky;
+  top: 108px;
+  align-self: start;
+  text-align: center;
+}
+.avatar {
+  width: 178px;
+  height: 178px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--line), 0 14px 38px rgba(31, 71, 112, 0.14);
+}
+.profile-card h1 {
+  margin: 1.25rem 0 0.1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.62rem;
+  line-height: 1.25;
+}
+.role { margin: 0.35rem 0; color: var(--ink); font-weight: 600; line-height: 1.45; }
+.affiliation { margin: 0.4rem auto 1.4rem; color: var(--muted); font-size: 0.92rem; line-height: 1.55; }
+.profile-links {
+  margin: 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+  text-align: left;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.profile-links li { display: flex; gap: 0.65rem; align-items: baseline; margin: 0.52rem 0; }
+.profile-links span { width: 1rem; color: var(--blue); text-align: center; }
+
+.content { min-width: 0; }
+.intro { padding: 0.2rem 0 2.5rem; border-bottom: 1px solid var(--line); }
+.intro h2 {
+  max-width: 740px;
+  margin: 0.2rem 0 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+.intro > p:last-child { max-width: 760px; margin: 0; color: #475366; font-size: 1.06rem; }
+.eyebrow, .paper-tag {
+  margin: 0;
+  color: var(--blue);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.section-block { padding: 2.7rem 0; border-bottom: 1px solid var(--line); }
+.section-block > h2, .sewing-feature h2 {
+  margin: 0 0 1.45rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  line-height: 1.3;
+}
+.research-grid { display: grid; gap: 1.4rem; }
+.research-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 36%) 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--wash);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.research-card:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(39, 61, 88, 0.09); }
+.research-card img { width: 100%; border: 1px solid var(--line); border-radius: 6px; background: white; }
+.research-card h3, .project h3 { margin: 0.18rem 0 0.45rem; font-size: 1.12rem; }
+.research-card p:last-child, .project p { margin: 0; color: #4f5b6d; font-size: 0.94rem; }
+.publication { display: grid; grid-template-columns: 64px 1fr; gap: 1rem; padding: 1.25rem 0; }
+.publication + .publication { border-top: 1px dashed var(--line); }
+.publication h3 { margin: 0; font-size: 1rem; line-height: 1.55; }
+.publication p { margin: 0.3rem 0 0; }
+.year { color: var(--blue); font-weight: 700; }
+.muted { color: var(--muted); font-size: 0.92rem; }
+.compact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.compact-grid > div > h2 { margin: 0 0 1rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.38rem; }
+.clean-list { margin: 0.65rem 0 0; padding-left: 1.15rem; color: #4f5b6d; }
+.clean-list li { margin: 0.45rem 0; }
+
+.project { padding: 1.55rem 0; }
+.project + .project { border-top: 1px dashed var(--line); }
+.project-heading { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; margin-bottom: 0.7rem; }
+.project-number { color: #dbe4ef; font-family: Georgia, "Times New Roman", serif; font-size: 2.5rem; font-weight: 700; line-height: 1; }
+.project .clean-list { font-size: 0.94rem; }
+.internship-line { margin: 0.55rem 0; color: #4f5b6d; }
+.internship-line em { color: var(--ink); }
+.chips { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+.chips span { padding: 0.38rem 0.72rem; border: 1px solid #cbdced; border-radius: 999px; color: #315f91; background: var(--blue-soft); font-size: 0.88rem; }
+
+.life-intro { position: relative; }
+.life-intro::after {
+  content: "";
+  display: block;
+  width: 105px;
+  margin-top: 2rem;
+  border-top: 3px dashed var(--warm);
+}
+.sewing-feature { display: grid; grid-template-columns: minmax(220px, 40%) 1fr; gap: 2.4rem; align-items: center; }
+.sewing-feature h2 { margin: 0.3rem 0 0.75rem; }
+.sewing-photo {
+  position: relative;
+  margin: 0;
+  padding: 0.55rem 0.55rem 2.4rem;
+  border: 1px solid #e4d7c2;
+  border-radius: 14px;
+  background: #fffdf9;
+  box-shadow: 0 16px 38px rgba(91, 69, 37, 0.12);
+  transform: rotate(-1.2deg);
+}
+.sewing-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 9px;
+}
+.sewing-photo figcaption {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.55rem;
+  color: #75664f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.86rem;
+  font-style: italic;
+}
+.stitch-mark {
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  gap: 9px;
+  border-radius: 50%;
+  background: #fff4df;
+  border: 1px solid #efd7ae;
+  transform: rotate(-7deg);
+}
+.stitch-mark span { display: block; width: 66px; border-top: 3px dashed var(--warm); }
+.life-notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.7rem; }
+.life-notes article > span { color: var(--warm); font-family: Georgia, serif; font-size: 0.85rem; }
+.life-notes h3 { margin: 0.25rem 0; font-family: Georgia, serif; font-size: 1.2rem; }
+.life-notes p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+.note-card { border: 0; }
+.note-card p { margin: 0; padding-left: 1.4rem; border-left: 3px solid var(--warm); color: #536071; font-family: Georgia, serif; font-size: 1.18rem; font-style: italic; }
+
+.footer { border-top: 1px solid var(--line); }
+.footer p { margin: 0; padding: 1.4rem 0; color: var(--muted); font-size: 0.88rem; text-align: center; }
+
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 2.6rem; }
+  .profile-card { position: static; }
+  .profile-links { width: min(340px, 100%); margin-inline: auto; }
+  .research-card { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .topbar-inner { min-height: auto; align-items: flex-start; padding: 0.8rem 0 0; flex-direction: column; gap: 0.15rem; }
+  .nav { width: 100%; justify-content: space-between; gap: 0.7rem; }
+  .nav a { padding: 0.55rem 0 0.8rem; font-size: 0.9rem; }
+  .nav a::after { bottom: 0.35rem; }
+  .layout { padding-top: 2.2rem; }
+  .avatar { width: 148px; height: 148px; }
+  .intro h2 { font-size: 2.15rem; }
+  .compact-grid, .life-notes, .sewing-feature { grid-template-columns: 1fr; }
+  .stitch-mark { width: 130px; }
+  .publication { grid-template-columns: 1fr; gap: 0.15rem; }
+}
